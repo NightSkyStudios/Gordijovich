@@ -42,7 +42,7 @@ $('.slider_active').owlCarousel({
   nav:true,
   dots:false,
   autoplayHoverPause: true,
-  autoplaySpeed: 800,
+  autoplaySpeed: 400,
   animateOut: 'fadeOut',
   animateIn: 'fadeIn',
   responsive:{
@@ -68,146 +68,12 @@ $('.slider_active').owlCarousel({
 });
 
 // review-active
-$('.testmonial_active').owlCarousel({
-  loop:true,
-  margin:30,
-items:1,
-// autoplay:true,
-navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-  nav:false,
-dots:true,
-autoplayHoverPause: true,
-autoplaySpeed: 800,
-  responsive:{
-      0:{
-          items:1,
-          dots:false,
-          nav:false,
-      },
-      767:{
-          items:2,
-          dots:false,
-          nav:false,
-      },
-      992:{
-          items:2,
-          nav:false
-      },
-      1200:{
-          items:2,
-          nav:false
-      },
-      1500:{
-          items:2
-      }
-  }
-});
 
 // review-active
-$('.project_details_active').owlCarousel({
-  loop:true,
-  margin:0,
-items:1,
-autoplay:true,
-navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-  nav:true,
-dots:false,
-autoplayHoverPause: true,
-autoplaySpeed: 800,
-
-  responsive:{
-      0:{
-          items:1,
-          nav:false
-      },
-      767:{
-          items:1,
-      },
-      992:{
-          items:1,
-          nav:false
-      },
-      1200:{
-          items:1,
-      },
-      1500:{
-          items:1,
-          nav:true
-      }
-  }
-});
 
 // review-active
-$('.case_active').owlCarousel({
-  loop:true,
-  margin:30,
-items:1,
-autoplay:false,
-navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-  nav:true,
-dots:true,
-autoplayHoverPause: true,
-autoplaySpeed: 800,
-// dotsData: true,
-center: false,
-  responsive:{
-      0:{
-          items:1,
-          nav:false
-      },
-      767:{
-          items:3,
-          nav:false
-      },
-      992:{
-          items:3,
-          nav:false
-      },
-      1200:{
-          items:3,
-          nav:false
-      },
-      1500:{
-          items:3,
-          nav:true
-      }
-  }
-});
 
 // review-active
-$('.property_banner_active').owlCarousel({
-  loop:true,
-  margin:30,
-items:1,
-autoplay:false,
-navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-  nav:true,
-dots:true,
-autoplayHoverPause: true,
-autoplaySpeed: 800,
-// dotsData: true,
-center: false,
-  responsive:{
-      0:{
-          items:1,
-          nav:false
-      },
-      767:{
-          items:1,
-          nav:false
-      },
-      992:{
-          items:1
-      },
-      1200:{
-          items:1
-      },
-      1500:{
-          items:1,
-          nav:true
-      }
-  }
-});
 
 // for filter
   // init Isotope

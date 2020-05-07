@@ -1,4 +1,4 @@
-.footer{
+.footer {
     background-repeat: no-repeat;
     background-position: center center;
     background-repeat: no-repeat;
@@ -6,25 +6,29 @@
     background: #000000;
     position: relative;
     z-index: 9;
-    .footer_top{
-        padding-top: 115px;
-        padding-bottom: 129px;
+
+    .footer_top {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         @media #{$mobile_device} {
-            padding-top: 60px;
-            padding-bottom: 30px;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
         }
-        .footer_widget{
+
+        .footer_widget {
             @media #{$mobile_device} {
                 margin-bottom: 30px;
             }
             @media #{$tablet_device} {
                 margin-bottom: 30px;
             }
+
             .links {
                 position: relative;
                 top: -14px;
             }
-            .footer_title{
+
+            .footer_title {
                 font-size: 20px;
                 font-weight: 400;
                 color: $btn-bg;
@@ -35,7 +39,8 @@
                     margin-bottom: 20px;
                 }
             }
-            .footer_logo{
+
+            .footer_logo {
                 font-size: 22px;
                 font-weight: 400;
                 color: #fff;
@@ -45,6 +50,7 @@
                     margin-bottom: 20px;
                 }
             }
+
             p {
 
                 color: #AAB1B7;
@@ -52,63 +58,75 @@
                 font-weight: 400;
                 line-height: 26px;
                 color: #AAB1B7;
-                a{
+
+                a {
                     color: #AAB1B7;
-                    &:hover{
+
+                    &:hover {
                         color: $btn-bg;
                     }
                 }
-            
+
             }
-            p.footer_text{
+
+            p.footer_text {
                 font-size: 16px;
                 color: #B2B2B2;
                 margin-bottom: 23px;
                 font-weight: 400;
                 line-height: 26px;
-                a.domain{
+
+                a.domain {
                     color: #B2B2B2;
                     font-weight: 400;
-                    &:hover{
+
+                    &:hover {
                         color: $btn-bg;
                         border-bottom: 1px solid $btn-bg
                     }
                 }
-                &.doanar{
-                    a{
-                    font-weight: 500;
-                    color: #B2B2B2;
-                    
-                    &:hover{
-                        color: $btn-bg;
-                        border-bottom: 1px solid $btn-bg
-                    }
-                    &.first{
-                        margin-bottom: 10px;
-                    }
+
+                &.doanar {
+                    a {
+                        font-weight: 500;
+                        color: #B2B2B2;
+
+                        &:hover {
+                            color: $btn-bg;
+                            border-bottom: 1px solid $btn-bg
+                        }
+
+                        &.first {
+                            margin-bottom: 10px;
+                        }
                     }
 
                 }
             }
-            ul{
-                li{
+
+            ul {
+                li {
                     color: #ACACAC;
                     font-size: 14px;
                     line-height: 36px;
-                    a{
+
+                    a {
                         color: #AAB1B7;
                         font-weight: 400;
                         font-family: $font2;
-                        &:hover{
+
+                        &:hover {
                             color: $btn-bg;
                         }
                     }
                 }
             }
-            .newsletter_form{
+
+            .newsletter_form {
                 position: relative;
                 margin-bottom: 20px;
-                input{
+
+                input {
                     width: 100%;
                     height: 50px;
                     background: #F5FBFF;
@@ -120,15 +138,18 @@
                     border-radius: 30px;
                     font-family: $font2;
                     padding-right: 120px;
-                    &::placeholder{
+
+                    &::placeholder {
                         font-size: 15px;
                         color: #AAB1B7;
                     }
-                    &:focus{
+
+                    &:focus {
                         outline: none;
                     }
                 }
-                button{
+
+                button {
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -148,7 +169,8 @@
                     font-family: $font2;
                 }
             }
-            .newsletter_text{
+
+            .newsletter_text {
                 font-size: 14px;
                 color: #AAB1B7;
                 line-height: 26px;
@@ -156,13 +178,16 @@
             }
         }
     }
-    .copy-right_text{
+
+    .copy-right_text {
         padding-bottom: 26px;
-        .footer_border{
+
+        .footer_border {
             border-top: 1px solid #1A1A1A;
             padding-bottom: 26px;
         }
-        .copy_right{
+
+        .copy_right {
             font-size: 15px;
             color: #AAB1B7;
             margin-bottom: 0;
@@ -170,21 +195,24 @@
             @media #{$mobile_device} {
                 font-size: 14px;
             }
-            a{
+
+            a {
                 color: $btn-bg;
             }
         }
     }
-    .socail_links{
+
+    .socail_links {
         margin-top: 47px;
         @media #{$mobile_device} {
             margin-top: 30px;
         }
-        ul{
-            li{
+
+        ul {
+            li {
                 display: inline-block;
 
-                a{
+                a {
                     font-size: 15px;
                     color: #C3B2F0;
                     width: 30px;
@@ -199,10 +227,11 @@
                     line-height: 40px !important;
                     // border: 1px solid #E8E8E8;
                     color: #E8E8E8;
-                 &:hover{
-                     color: $btn-bg !important;
-                     border-color: transparent;
-                 }
+
+                    &:hover {
+                        color: $btn-bg !important;
+                        border-color: transparent;
+                    }
                 }
             }
         }
