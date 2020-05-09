@@ -14,8 +14,6 @@
                             <a href="#">contact@gordijovich.com</a>
                         </p>
                         <p>
-
-
                         </p>
                         <div class="socail_links">
                             <ul>
@@ -55,10 +53,10 @@
                             Useful Links
                         </h3>
                         <ul class="links">
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#"> Gallery</a></li>
-                            <li><a href="#"> Contact</a></li>
+                            <li><a href="{% url "pricing" %}">Pricing</a></li>
+                            <li><a href="{% url "about" %}">About</a></li>
+                            <li><a href="{% url "projects" %}"> Projects</a></li>
+                            <li><a href="{% url "contact" %}"> Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,7 +83,7 @@
                     <p class="copy_right text-center">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
                         All rights reserved | Made with <i class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i> by <a
+                                                           aria-hidden="true"></i> by <a
                             href="" target="_blank">Night Sky Studios</a>
                     </p>
                 </div>

@@ -10,37 +10,24 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'includes/head_links.html' %}
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.js' %}"></script>
 </head>
 
 <body>
 {% include 'includes/navbar.html' %}
 
-<!-- slider_area_start -->
+<!-- hero_area_start -->
 <div class="slider_area">
     <div class="slider_active owl-carousel">
         <div class="single_slider  d-flex align-items-center overlay"
-             style="background-image: url({{ static }}img/banner/banner.png);">
+             style="background-image: url({{ static }}img/hero_bg.jpg);">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-xl-12">
                         <div class="slider_text text-center">
-                            <h3>Body Shape</h3>
-                            <p>Build Your Body and Fitness with Professional Touch</p>
-                            <a href="#" class="boxed-btn3">Join Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="single_slider  d-flex align-items-center overlay"
-             style="background-image: url({{ static }}img/banner/banner2.png);">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>Strength</h3>
-                            <p>Build Your Body and Fitness with Professional Touch</p>
-                            <a href="#" class="boxed-btn3">Join Us</a>
+                            <h3>Customized 3D Animation</h3>
+                            <p>PROMO|TECHNICAL|STORE</p>
                         </div>
                     </div>
                 </div>
@@ -48,96 +35,46 @@
         </div>
     </div>
 </div>
-<!-- slider_area_end -->
+<!-- hero_area_end -->
 
-<!-- catagory_area  -->
-<div class="catagory_area">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-lg-6 col-md-6">
-                <div class="single_catagory text-center overlay2 cat_bg_1">
-                    <h3>For Girl</h3>
-                    <p>There are many variations of passages of lorem <br> Ipsum available, but the majority have
-                        suffered <br> alteration.</p>
-                    <a href="#" class="boxed-btn3">Join Now</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="single_catagory text-center overlay2 cat_bg_2">
-                    <h3>For Boys</h3>
-                    <p>There are many variations of passages of lorem <br> Ipsum available, but the majority have
-                        suffered <br> alteration.</p>
-                    <a href="#" class="boxed-btn3">Join Now</a>
-                </div>
-            </div>
-        </div>
+<!-- about_area -->
+<div class="row index_about">
+    <div class="col-lg-7">
+        <h3><span class="font-weight-bold">GORDIJOVICH </span><span
+                class="text-accent font-weight-light">3D ANIMATION </span><span
+                class="font-weight-light">SERVICES</span></h3>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur atque eum, harum totam ullam voluptas! A eius excepturi nobis quidem quos? Beatae doloremque doloribus in ipsam necessitatibus placeat soluta.</span><span>Ad amet animi, at dolorem dolores ducimus eaque et explicabo hic illum impedit ipsa, ipsam laborum libero magnam maxime odio officia praesentium quaerat qui quisquam reiciendis reprehenderit, similique temporibus veritatis?</span><span>Amet animi aut autem commodi consectetur corporis deleniti deserunt doloremque esse et ex in iure libero nisi odio officiis omnis, possimus quibusdam quod reiciendis repellendus sequi sunt tempora ullam veritatis!</span><span>Accusamus aliquam amet autem, cum cupiditate debitis delectus, dolor dolore doloribus eaque eius est ex illum laborum libero nihil pariatur provident quaerat repellat unde? Eos ex incidunt omnis possimus suscipit!</span>
+        </p>
+    </div>
+    <div class="col-lg-5">
+        <img src="{% static 'img/hero_bg.jpg' %}" alt="">
     </div>
 </div>
-<!--/ catagory_area  -->
+<!--/ about_area  -->
 <div class="big_offer_area-2">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="offter_text text-center">
-                    <h3>Our <span color: #FF1414;">Works</span></h3>
+                    <h3>Our <span style="color: #FF1414;">Works</span></h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="gallery_area">
-    <div class="single_gallery big_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/1.png">
-                <i class="ti-plus"></i>
-            </a>
+<div class="portfolio-grid">
+    {% for item in projects %}
+        <div class="portfolio-item {{ item.category }}">
+            <img class="portfolio-image" src="{{ item.image.url }}" alt="">
+            <div onclick="" class="overlay">
+                <h2>{{ item.name }}</h2>
+                <span>{{ item.description|truncatechars:32 }}</span>
+                <br>
+                <a href="{% url "project_page" item.pk %}" class="sq-button">MORE</a>
+            </div>
         </div>
-        <img src="{{ static }}img/gallery/1.png" alt="">
-    </div>
-    <div class="single_gallery big_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/2.png">
-                <i class="ti-plus"></i>
-            </a>
-        </div>
-        <img src="{{ static }}img/gallery/2.png" alt="">
-    </div>
-    <div class="single_gallery small_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/3.png">
-                <i class="ti-plus"></i>
-            </a>
-        </div>
-        <img src="{{ static }}img/gallery/3.png" alt="">
-    </div>
-    <div class="single_gallery small_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/4.png">
-                <i class="ti-plus"></i>
-            </a>
-        </div>
-        <img src="{{ static }}img/gallery/4.png" alt="">
-    </div>
-    <div class="single_gallery big_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/5.png">
-                <i class="ti-plus"></i>
-            </a>
-        </div>
-        <img src="{{ static }}img/gallery/5.png" alt="">
-    </div>
-    <div class="single_gallery big_img">
-        <div class="hover_pop">
-            <a class="popup-image" href="{{ static }}img/gallery/6.png">
-                <i class="ti-plus"></i>
-            </a>
-        </div>
-        <img src="{{ static }}img/gallery/6.png" alt="">
-    </div>
-
+    {% endfor %}
 </div>
-<a href="#" class="view_pore boxed-btn3">View More</a>
-
 
 <div class="big_offer_area">
     <div class="container">
@@ -155,6 +92,31 @@
 {% include 'includes/footer.html' %}
 
 {% include 'includes/footer_links.html' %}
+<script>
+
+    // element argument can be a selector string
+    //   for an individual element
+    let grid = document.querySelector('.portfolio-grid');
+
+    var iso = new Isotope(grid, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry',
+    });
+
+    function filter(attr) {
+        iso.arrange({
+            filter: attr
+        })
+    }
+
+    imagesLoaded(grid).on('progress', function () {
+        // layout Isotope after each image loads
+        iso.layout();
+    });
+
+    filter('.{{ filter }}')
+
+</script>
 </body>
 
 </html>

@@ -1,4 +1,9 @@
 <!-- header-start -->
+{% url "index" as index %}
+{% url "about" as about %}
+{% url "projects" as projects %}
+{% url "pricing" as pricing %}
+{% url "contact" as contact %}
 <header>
     <div class="header-area ">
         <div id="sticky-header" class="main-header-area">
@@ -12,24 +17,17 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-7 col-lg-7">
+                        <div class="col-xl-9 col-lg-10">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="{% url 'index' %}">home</a></li>
-                                        <li><a href="{% url 'about' %}">about</a></li>
-                                        <li><a href="{% url 'about' %}">projects</a></li>
-                                        <li><a href="{% url 'pricing' %}">pricing</a></li>
-                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        <li><a {% if request.path == index %} class="active" {% endif %} href="{{ index }}">home</a></li>
+                                        <li><a {% if request.path == about %} class="active" {% endif %} href="{{ about }}">about</a></li>
+                                        <li><a {% if request.path == projects %} class="active" {% endif %} href="{{ projects }}">projects</a></li>
+                                        <li><a {% if request.path == pricing %} class="active" {% endif %} href="{{ pricing }}">pricing</a></li>
+                                        <li><a {% if request.path == contact %} class="active" {% endif %} href="{{ contact }}">Contact</a></li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a href="{% url 'contact' %}">Contact Us</a>
-                                </div>
                             </div>
                         </div>
                         <div class="col-12">
