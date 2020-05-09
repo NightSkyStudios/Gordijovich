@@ -33,9 +33,8 @@
         </div>
     </div>
 </div>
-<!-- slider_area_end -->
 
-<!-- gallery_start -->
+
 <div class="portfolio-grid">
     {% for item in projects %}
         <div class="portfolio-item {{ item.category }}">
@@ -44,110 +43,13 @@
                 <h2>{{ item.name }}</h2>
                 <span>{{ item.description|truncatechars:32 }}</span>
                 <br>
-                <a href="{% url "project_page" item.pk %}" class="sq-button">MORE</a>
+                <a href="{% url "project_page" item.slug %}" class="sq-button">MORE</a>
             </div>
         </div>
     {% endfor %}
 </div>
 
-<!-- gallery_area_end  -->
-{#<a href="#" class="view_pore boxed-btn3">View More</a>#}
-<!-- team_area_start  -->
-{#<div class="team_area team_bg_1 overlay2">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-xl-12">#}
-{#                <div class="section_title text-center mb-73">#}
-{#                    <h3>Our Partners</h3>#}
-{#                    <p>There are many variations of passages of lorem Ipsum available, but the majority <br> have#}
-{#                        suffered alteration.</p>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#            <div class="col-lg-4 col-md-6">#}
-{#                <div class="single_team">#}
-{#                    <div class="team_thumb">#}
-{#                        <img src="img/team/1.png" alt="">#}
-{#                        <div class="team_hover">#}
-{#                            <div class="hover_inner text-center">#}
-{#                                <ul>#}
-{#                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="team_title text-center">#}
-{#                        <h3>Jessica Mino</h3>#}
-{#                        <p>Woman Trainer</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col-lg-4 col-md-6">#}
-{#                <div class="single_team">#}
-{#                    <div class="team_thumb">#}
-{#                        <img src="img/team/2.png" alt="">#}
-{#                        <div class="team_hover">#}
-{#                            <div class="hover_inner text-center">#}
-{#                                <ul>#}
-{#                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="team_title text-center">#}
-{#                        <h3>Amit Khan</h3>#}
-{#                        <p>Men Trainer</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col-lg-4 col-md-6">#}
-{#                <div class="single_team">#}
-{#                    <div class="team_thumb">#}
-{#                        <img src="img/team/3.png" alt="">#}
-{#                        <div class="team_hover">#}
-{#                            <div class="hover_inner text-center">#}
-{#                                <ul>#}
-{#                                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>#}
-{#                                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>#}
-{#                                </ul>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="team_title text-center">#}
-{#                        <h3>Paulo Rolac</h3>#}
-{#                        <p>Men Trainer</p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-<!-- team_area_end  -->
 
-<!-- big_offer_area start  -->
-{#<div class="big_offer_area">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-xl-12">#}
-{#                <div class="offter_text text-center">#}
-{#                    <h3>A Big Offer for <br>#}
-{#                        This Summer</h3>#}
-{#                    <a href="#" class="boxed-btn3">Join Now</a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-<!-- big_offer_area end  -->
-
-
-<!-- footer_start  -->
 {% include 'includes/footer.html' %}
 
 {% include 'includes/footer_links.html' %}
@@ -175,21 +77,6 @@
 
     filter('.{{ filter }}')
 
-</script>
-<script>
-    $('#datepicker').datepicker({
-        iconsLibrary: 'fontawesome',
-        icons: {
-            rightIcon: '<span class="fa fa-calendar-o"></span>'
-        }
-    });
-    $('#datepicker2').datepicker({
-        iconsLibrary: 'fontawesome',
-        icons: {
-            rightIcon: '<span class="fa fa-calendar-o"></span>'
-        }
-
-    });
 </script>
 </body>
 

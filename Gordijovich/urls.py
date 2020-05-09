@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 from core import views
 
@@ -27,7 +27,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('projects', views.projects, name='projects'),
-    path('project/<id>', views.project, name='project_page'),
+    re_path(r'project/(?P<slug>[\w-]+)/$', views.project, name='project_page'),
 ]
 
 

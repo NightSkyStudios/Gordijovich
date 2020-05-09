@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Project, Slider
+from .models import Project, Partner
 
 # Register your models here.
 admin.site.register(Project)
-admin.site.register(Slider)
+admin.site.register(Partner)
