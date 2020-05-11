@@ -12,6 +12,7 @@ class Project(models.Model):
     url = models.URLField('URL Відео', blank=True, null=True)
     description = models.TextField('Опис проекту')
     slug = AutoSlugField(populate_from='name')
+    is_hidden = models.BooleanField('Приховати публікацію', default=False ,blank=True)
 
     def __str__(self):
         return self.name

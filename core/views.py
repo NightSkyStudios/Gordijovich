@@ -5,7 +5,7 @@ from .models import *
 # Create your views here.
 def index(request):
     ctx = {
-        'projects': Project.objects.all().order_by('-id')[:6]
+        'projects': Project.objects.all().order_by('-id').filter(is_hidden=False)[:6]
     }
 
     return render(request, 'index.html', ctx)
@@ -30,7 +30,7 @@ def contact(request):
 
 def projects(request):
     ctx = {
-        'projects': Project.objects.all()
+        'projects': Project.objects.all().filter(is_hidden=False).order_by('-id')
     }
     return render(request, 'projects_grid.html', ctx)
 
